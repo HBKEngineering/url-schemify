@@ -1,7 +1,7 @@
 'use strict';
 
 var URL_SCHEME_REGEXP = /^((?:f|ht)tps?:)?\/\//;
-var DEFAULT_SCHEME = 'https';
+var DEFAULT_SCHEME = process.env.SCHEME || 'https';
 
 module.exports = function(url, options) {
   options || (options = {});
